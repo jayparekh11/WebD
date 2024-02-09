@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Article</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body>
+    <!--  Home section with the navbar -->
+    <section id="home" class="home">
+      <nav class="navbar">
+        <img class="logo" src="images/logo.png" alt="Logo" />
+        <div class="navigation">
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">Services</a>
+          <a href="">Upcoming Packages</a>
+        </div>
+        <button class="nav-btn">Get in Touch</button>
+      </nav>
+      <div class="hero-content container">
+        <p>
+          No matter where <br />
+          you're going to, we'll <br />
+          take you there
+        </p>
+        <div class="search-panel">
+          <form class="search-form">
+            <input
+              type="text" required
+              placeholder="Where to?"
+              aria-label="Destination"
+            />
+            <select aria-label="Travel Type">
+              <option value="">Travel Type</option>
+              <option value="leisure">Leisure</option>
+              <option value="business">Business</option>
+              <option value="adventure">Adventure</option>
+            </select>
+            <select aria-label="Duration">
+              <option value="">Duration</option>
+              <option value="short">1-3 Days</option>
+              <option value="week">4-7 Days</option>
+              <option value="long">8+ Days</option>
+            </select>
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+
+        </div>
+          <div>
+            <img
+              src="images/ppl.jpeg" alt="Profile Picture" width="200px" height="50px"/>
+              <span class="number-booked">2,500 people booked Tomorrowland
+            Event in last 24 hours</span>
+
+        </div>
+      
+    </section>
+
+    <!-- Companies Section-->
+    <section class="companies">
+      <img src="/images/emirates-fotor-bg-remover-20240131131325.png" alt="" width="10%" height="50%" />
+      <img src="/images/trivago-fotor-bg-remover-20240131131533.png" alt="" width="10%" height="50%"/>
+      <img src="/images/airbnb-fotor-bg-remover-20240131131443.png" alt="" width="10%" height="50%" />
+      <img src="/images/turkish-fotor-bg-remover-20240131131651.png" alt="" width="10%" height="50%" />
+      <img src="/images/swiss.png" alt="" width="10%" height="50%" />
+    </section>
+
+    <!-- Services Section-->
+    <section class="services container">
+      <p>Category</p>
+      <h1>We Offer Best Services</h1>
+      <div class="cards">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStbBXUcODQtb5_CpL0lpJUHzh5go_mgFFLVA&usqp=CAU" alt="" />
+          <h4>Guider Tours</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+            neque voluptate quae quasi voluptatum,
+          </p>
+        </div>
+        <div class="card">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAilBMVEX///8dHRsAAAAUFBEaGhihoaGtrawbGxk3NzYYGBYTExDT09MQEA34+PiRkZHp6ekKCgV/f35NTUyzs7Lx8fHCwsIiIiDd3d13d3YzMzHu7u68vLxmZmVcXFtQUE/W1taHh4fIyMdAQD5zc3ErKyqmpqVqamlVVVWPj44sLCxhYWE0NDKamppFRUNbVv/MAAAGhklEQVR4nO2daXuiMBDHy4AHyBFbRS3etce69ft/vQ2HnAmNddskML8320fRZ/zvkEwmk+HhAUEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQRG0W0810IdsItTgAcQgcZJuhEp5rG4Zhu55sQxRiAEYMDGQbohBjO9HEHss2RB2C1E2oowSyTVGGp1yTJ9mmKMOUZJqQqWxTlOFoZ5rYR9mmKIM7yjQZubJNUYV8iMVBNmdX0mQn2xhFiEqaRLKNUYTXkiavso1RhM+SJp+yjVGEJck1IUvZxijC2s01cdeyjVGEdzPXxHyXbYwiXEqaXGQbowhjO9cEswUZf6xcE+uPbGPUwAtLmoSYfozx7FGuychGTWI8UtKEoCYxsyKMpYHsTLY5SoCaNEFNmqAmTVCTJqhJE9SkSVDRBJPUlIlplTSxzIlsg+QzgLIkVBQsLngDow68yTZKKsG4KQkVZdzjQWUOJkMSwzBhLts0WXzAiCkJXR7Dh2zjfpHZ5Frd6G1Y901+/2yuSYPFpOMhyycAnJO/FiFpkcQwSJiKd6af8GWa/NPMY9eAuPDmCexWSQzDToqWpsknujy8nJPdLch+6lfE4iXXuWfZhv8gj8k8A4uLiCT0wssiudB8lG34D5JqYjjsKbiJ4xh90eRWUBPUpI+aBOW1y/abmmx5X6gjNFiFMK/b24W8YL6dUfEVkxCKEFdPHiEOvrLg3K+lSsSxrqHsLA71QOtbKU0rplmi50exoIQNPD7HX5IeatE6QTlJfgLZ0z8j4rb/6i9wSVwmuk8WSaBzfrLQZPnt++aKBcsuaeIHq3vumyuwCvyuaGIdyffm4DomOVod0cS497YpSL+pC5r8b1CTjmmy+yFNdD7RMmjTxCIAzBnaoq+TtjFI461Cb90iiQPux+HwaTQz1cT4PMx9F5wWUdaaLnkmNjczT13kPTu9dK5fRDbpG9E724vSiywthxT+is+B8KNYsZyqCXz7lL8TfIRcZ7F03ODg7WjRwWJT2Zp4ql5YPXY933CdBTa/+4Puxjuy7xs6ivi1Re2ipkmtC0rAHVnIUatBxRuzJGm4SMKspklzJ5TnLHqJsmVI4oBRd5GUmiasSwLfYDkL2bIuVpPmLh91kXfeBmdYqd0KOVfNWdMQaNPf4FCXhE40bBdJqCTzW1L0gd+chrRpNxRWZlf2KFJiXU7Aua2FW42Rxea5lWJUAnoHSIuLJCzLg89Xh2kDn1ScRZMwv0iXfOkiCX6lPvbrUKziLJbxP0z+aebXn9g+ihQMK5oMBT5RHlm0qE1Jm96IuUhCVNFEsIlD7ixatNZZ2eIuklBJPImnizJnsVffM/NXAeoiZ5aLHDi1ekL19jPWpDs/U2dhBnmKcWqsaFKGvC1NoXMZj+yBhq6GdD6RPIC/7De8Uenc6IizhPmryaR7GwPgnbsXOZs/7pkmpeCeG9r3TZNScO/w+p/0TZNpqU8OL9romyYi/ZT6pkkpuOeG9vprsrCa9wBfE5H+bCxNppZOHayH0Iwu+ZqI9PFjaQJCC0ZVGILZeI2viUi/R5YmZoc1eS5p8sy5pm+aiPRK7Z0meeaem7XvnyYCfYZ7p8n5mkh0uAe6eqeJQI/u3mni55pws/a90yRvqstvqds7TfLgnp+1750meeaen7XvnSZ5WU69IKegd5rkwT03tO+sJpy8/UNRlsPfq2Hl7fXX5An4VUVZF8wR4V6xZTxyRX9NHib86rOvn0nkMUbfDmjSwiYN7p3byju7rclLupvhvtz0qW5rkh7zSw9TitNtTbLdjBufDNFtTbL68hsf56WbJs4NV+/2pzTRZp32t5xWcjTTRLhSxnsdFweYLALjV+GCcb32MrypYFna4Q1qzaZsgDfBQuBoqlO9vRjPgxWwDuy7sPrkLnw6zaThIlVn0fIg1z3MXk/gtjZDcSF87XgDvwq7Jd9FKs6y1PnQ7C08XaC9rWEBgUsvnkC65zRIZWPCXrbBv0CzQarlZtMP/bdxbGmkQ03wnUTVA082AQiXUbIwdl+iZQhAqkNNDx6jWDy8a2QCwHgfxaFIlLf/fI72Y/q6mXtT15qzNclS9COX+sPWL0rw11SHvA50dvC31H+yyZqfzO8IUxIPH/T3D2qpyLlfPbfgTQbrWBdLj9Mod+BROcKXoej//GL4QgcY6N6ypsxkGd3aWy2Ilr0L8xEEQRAEQRAEQRAEQRAEQRAEQRAEQRAEUZV/cq5KI/i8gOQAAAAASUVORK5CYII=" alt="" />
+          <h4>Guider Tours</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+            neque voluptate quae quasi voluptatum,
+          </p>
+        </div>
+        <div class="card">
+          <img src="data:image/png;base64,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" alt="" />
+          <h4>Guider Tours</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+            neque voluptate quae quasi voluptatum,
+          </p>
+        </div>
+        <div class="card">
+          <img src="data:image/png;base64,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" alt="" />
+          <h4>Guider Tours</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+            neque voluptate quae quasi voluptatum,
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Honeymoon Package Section-->
+    <section class="honeymoon-pkg container">
+      <img
+        src="https://i0.wp.com/www.weddingforward.com/wp-content/uploads/2021/11/tropical-honeymoon-destinations-unsplash.jpg?w=1500&quality=70&ssl=1"
+        alt=""
+      />
+      <p class="overlay-text">Honeymoon Package</p>
+      <div class="overlay-images">
+        <img
+          src="https://images.ctfassets.net/77l22z9el0aa/2FKlSh382WSakzoFOsTcD7/9b0cfc4070ed1aeecc12d2d942dab18e/hero_stocksy1.jpg?w=635&fm=webp"
+          alt="Overlay Image 1"
+          class="small-image top-left"
+        />
+        <img
+          src="https://www.yourtango.com/sites/default/files/image_blog/just-married-here-are-10-sexy-overseas-honeymoon-vacations.png"
+          alt="Overlay Image 2"
+          class="small-image top-middle"
+        />
+        <img
+          src="https://i0.wp.com/www.weddingforward.com/wp-content/uploads/2020/11/best-honeymoon-destinations-unsplash.jpg?fit=313%2C500&quality=70&ssl=1"
+          alt="Overlay Image 3"
+          class="small-image top-right"
+        />
+      </div>
+      <div class="honeymoon-pkg-details">
+        <p>Honeymoon Specials</p>
+        <h1>Our Romantic Tropical Destinations</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
+          quaerat ipsum corporis optio? Error provident cumque eaque obcaecati
+          harum quasi delectus? Reprehenderit dolorum tempora nam, animi magni
+          praesentium dignissimos. Dolores.
+        </p>
+        <button class="pkg-btn">View Packages</button>
+      </div>
+    </section>
+    <!-- Resort Booking Section-->
+    
+    <section class="resort-booking container">
+      <div class="resort-booking-details">
+        <p>Fast and Easy</p>
+        <h1>Get Your Favorite Resort Bookings</h1>
+        <div class="booking-steps">
+          <div class="step">
+            <img src="images/pass.png" alt="Choose Destination" />
+            <div class="step-details">
+              <h2>Choose Destination</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <img src="images/cal.png" alt="Check Availability" />
+            <div class="step-details">
+              <h2>Choose Availability</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <img src="images/go.png" alt="Let's Go" />
+            <div class="step-details">
+              <h2>Let's go</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info-card">
+        <img
+          src="https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="Trip to Hawaii"
+        />
+
+        <h3>Trip to Hawaii</h3>
+        <p>14-29 June | by JR Marti</p>
+        <div class="icons">
+          <!-- Icons here -->
+        </div>
+        <p>60 people are interested</p>
+        <div class="progress-bar">
+          <span class="progress, w"></span>
+        </div>
+      </div>
+    </section>
+    <!-- Explore banner section-->
+    <section class="explore">
+      <div class="banner-text">
+        Let's Make Your <br />
+        Next Holiday Amazing
+      </div>
+    </section>
+
+    <!-- Sight seeing section-->
+    <section class="sight-seeing container">
+      <div class="sight-seeing-details">
+        <p>Promotion</p>
+        <h1>
+          We Provide You The Best <br />
+          Europe Sight Seeing Tours
+        </h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
+          quaerat ipsum corporis optio? Error provident cumque eaque obcaecati
+          harum quasi delectus? Reprehenderit dolorum tempora nam, animi magni
+          praesentium dignissimos. Dolores.
+        </p>
+        <button class="pkg-btn">View Packages</button>
+
+        <div class="image-card-section">
+          <!-- Individual image card -->
+          <div class="image-card">
+            <img
+              src="https://images.pexels.com/photos/11262371/pexels-photo-11262371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="Big Ben"
+            />
+            <div class="price-tag">$700</div>
+          </div>
+
+          <!-- Individual image card -->
+          <div class="image-card">
+            <img
+              src="https://images.pexels.com/photos/561463/pexels-photo-561463.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="Sunset Cityscape"
+            />
+            <div class="price-tag">$800</div>
+          </div>
+
+          <!-- Individual image card -->
+          <div class="image-card">
+            <img
+              src="https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="Colosseum"
+            />
+            <div class="price-tag">$500</div>
+          </div>
+
+          <!-- Individual image card -->
+          <div class="image-card">
+            <img
+              src="https://images.pexels.com/photos/2886268/pexels-photo-2886268.jpeg"
+              alt="Cathedral"
+            />
+            <div class="price-tag">$400</div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt=""
+      />
+      <p class="overlay-text">Breath Taking Views</p>
+    </section>
+    <!-- Promotion section container -->
+    <section class="promotion-section">
+      <!-- Promotion item for nature -->
+      <div class="promo-item">
+        <!-- Text overlay for the promotion item -->
+        <div class="promo-text">
+          <span class="promo-title">PROMOTION</span>
+          <h1>Explore Nature</h1>
+          <!-- Call to action button -->
+          <button class="promo-btn">View Packages</button>
+        </div>
+      </div>
+
+      <!-- Promotion item for cities -->
+      <div class="promo-item">
+        <!-- Text overlay for the promotion item -->
+        <div class="promo-text">
+          <span class="promo-title">PROMOTION</span>
+          <h1>Explore Cities</h1>
+          <!-- Call to action button -->
+          <button class="promo-btn">View Packages</button>
+        </div>
+      </div>
+    </section>
+    <!-- Trending Packages section -->
+    <section class="trending-section container">
+      <p>Fast and Easy</p>
+      <h1>Our Trending Tour <br />Packages</h1>
+      <div class="travel-cards">
+        <article class="travel-card">
+          <img
+            src="https://switzerland-tour.com/images/inform/Swiss%20Landscape.jpg"
+            alt="Switzerland"
+            class="travel-image"
+          />
+
+          <div class="card-1">
+            <span class="heading">Switzerland</span>
+            <span id="jay" class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="travel-details">
+            <p>
+              <i class="fa fa-calendar" aria-hidden="true"> </i>&nbsp<strong
+                >8 Days</strong
+              >
+              <i class="fa fa-user" aria-hidden="true"></i>&nbsp;<strong
+                >25 People Going</strong
+              >
+            </p>
+            <p><i class="fas fa-map-marker-alt"></i> Europe</p>
+          </div>
+          <div class="pricing">
+            <p class="current-price">$1,000</p>
+            <p class="original-price">$1,200</p>
+          </div>
+          <p class="description">
+            Nam exercitationem commodi et ducimus quia in dolore animi sit
+            mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum
+            molestias mollitia et corporis praesentium a laudantium internos.
+          </p>
+          <button class="explore-btn">Explore Now</button>
+        </article>
+
+        <article class="travel-card">
+          <img
+            src="https://wwfint.awsassets.panda.org/img/scr_105027_538576.jpg"
+            alt="Switzerland"
+            class="travel-image"
+          />
+          <div class="card-1">
+            <span class="heading">Amazon</span>
+            <span id="Het" class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="travel-details">
+            <p>
+              <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp<strong
+                >8 Days</strong
+              >
+              <i class="fa fa-user" aria-hidden="true"></i>&nbsp;<strong
+                >30 People Going</strong
+              >
+            </p>
+            <p><i class="fas fa-map-marker-alt"></i> Brazil</p>
+          </div>
+          <div class="pricing">
+            <p class="current-price">$1,223</p>
+            <p class="original-price">$1,200</p>
+          </div>
+          <p class="description">
+            Nam exercitationem commodi et ducimus quia in dolore animi sit
+            mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum
+            molestias mollitia et corporis praesentium a laudantium internos.
+          </p>
+          <button class="explore-btn">Explore Now</button>
+        </article>
+
+        <article class="travel-card">
+          <img
+            src="https://images.fineartamerica.com/images-medium-large-5/1-sunset-at-the-pyramids-giza-cairo-nick-brundle-photography.jpg"
+            alt="Switzerland"
+            class="travel-image"
+          />
+          <div class="card-1">
+            <span class="heading">Giza</span>
+            <span
+              id="jay"
+              class="fa fa-star checked, m"
+            ></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="travel-details">
+            <p>
+              <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp<strong
+                >8 Days</strong
+              >
+              <i class="fa fa-user" aria-hidden="true"></i>&nbsp;<strong
+                >155 People Going</strong
+              >
+            </p>
+            <p><i class="fas fa-map-marker-alt"></i> Egypt</p>
+          </div>
+          <div class="pricing">
+            <p class="current-price">$1,200</p>
+            <p class="original-price">$1,200</p>
+          </div>
+          <p class="description">
+            Nam exercitationem commodi et ducimus quia in dolore animi sit
+            mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum
+            molestias mollitia et corporis praesentium a laudantium internos.
+          </p>
+          <button class="explore-btn" type="button" >Explore Now</button>
+        </article>
+      </div>
+    </section>
+
+    
+<!-- 
+    <section class="testimonial">
+        <header>
+          <p class="sub-head">Promotion</p>
+          <h1>See What Our Clients Say About Us</h1>
+        </header>
+        <div class="testimonial-wrapper">
+          <div class="testimonial-card">
+            <div class="testimonial-card-details">
+              <p class="testimonial-text">
+                "Vel officiis dolor ea illo aut eligendi ullam non laudantium
+                magnam et recusandae molestiae sit iure unde aut voluptate
+                quaerat. Id sunt provident quo possimus impedit vel doloremque
+                obcaecati qui ullam consectetur et ipsum omnis."
+              </p>
+              <p class="testimonial-author">
+                <strong>Christine Beckam - Designer</strong>
+              </p>
+            </div>
+            <img
+              src="https://images.pexels.com/photos/5477855/pexels-photo-5477855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="Testimonial Author"
+              class="testimonial-author-img"
+            />
+          </div>
+        </div>
+      </section> -->
+
+
+   <!-- Client Comments -->
+   <section class="clients-testimonials-section">
+    <br/><br/>
+    <h5 class="clients-promotion-heading">PROMOTION</h5>
+    <h1 class="clients-main-heading">See What Our Clients Say <br/> About Us</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/6009/6009864.png" alt="client" class="client-testimonial-image">
+    <br/>
+    <img src="https://www.lireo.com/wp-content/uploads/lireo-design-google-reviews.jpg" alt="comments" class="clients-comments-image">
+    <br/><br/>
+</section>
+<br/><br/>
+
+
+
+    <section>
+    <!--Footer with contact details-->
+    <footer>
+        <div id="contact" class="contact-container">
+   
+            <!-- Travel-->
+            <div class="contact-section">
+                <img class="logo" src="images/logo.png" alt="Logo" />
+                <br />
+                <p>Travel helps companies <br>manage payments easily.</p>
+                <br />
+                <br />
+                <!-- Social Media Icons -->
+                <ul class="social-icons">
+                    <li><a href="https://www.linkedin.com"><img src="images/in.png" alt="LinkedIn" width="25" height="25"></a></li>
+                    
+                    <li><a href="https://www.facebook.com"><img src="images/fb.jpeg" alt="Facebook" width="25" height="25"></a></li>
+                    <li><a href="https://twitter.com/"><img src="images/twi.png" alt="Twitter" width="25" height="25"></a></li>
+                    <li><a href="https://www.instagram.com"><img src="images/mes.png" alt="YouTube" width="25" height="25"></a></li>
+                </ul>
+            </div>
+   
+            <!-- Company -->
+            <div class="contact-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li> <br />
+                    <li><a href="#">Careers</a></li> <br />
+                    <li><a href="#">Blog</a></li> <br />
+                    <li><a href="#">Pricing</a></li> <br />
+                </ul>
+            </div>
+   
+            <!-- Destination -->
+            <div class="contact-section">
+                <h4>Destinations</h4>
+                <ul>
+                    <li><a href="#">Maldives</a></li> <br />
+                    <li><a href="#">Los Angeles</a></li> <br />
+                    <li><a href="#">Las Vegas</a></li> <br />
+                    <li><a href="#">Toronto</a></li> <br />
+                </ul>
+            </div>
+   
+            <!-- Subscription -->
+            <div class="contact-section">
+                <h4>Join Our Newsletter</h4>
+                <br />
+                <form action="#" method="post" id="newsletter">
+                    <input type="email" name="email" required placeholder="Enter your email" maxlength="25">
+                    <button class="explore-btn" type="submit">Subscribe</button>
+                </form>
+                <br />
+                <p><i>*Will send you weekly updates <br>for your better tour packages.</i></p>
+                <br />
+                <h4 class="contact1">
+                <p>Contact Information:</p>
+                <address>
+                    <a href="mailto:parekh.jay1@northeastern.edu">parekh.jay1@northeastern.edu</a><br>
+                    <a href="tel: +111-111-1111">+1(857)-701-7679</a>
+                </address>
+            </h4>
+
+            <br />
+            <br />
+            </div>
+        </div>
+        <hr>
+        <br />
+        <br />
+        <p class="copyright">© Copyright @Jay Parekh 2024.All Rights Reserved.</p>
+
+        <br />
+        <br />
+        <br />
+    </footer>
+
+</section>
+
+
+</body>
+</html>
